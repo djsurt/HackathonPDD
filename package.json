@@ -1,0 +1,57 @@
+Here is the production-ready `package.json` file configured for a React + Vite application with React Router.
+
+```json
+{
+  "name": "email-task-app",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "vite": "^5.1.0"
+  }
+}
+```
+
+### Explanation of Configuration
+
+1.  **Metadata**:
+    *   `"name"`: Set to "email-task-app" as a descriptive identifier.
+    *   `"version"`: Initialized to "1.0.0" following semantic versioning.
+    *   `"private": true`: Prevents accidental publication to the public npm registry, which is standard for application source code.
+
+2.  **Module System**:
+    *   `"type": "module"`: Explicitly enables ES Module (ESM) syntax, allowing the use of `import` and `export` statements directly in Node.js environments (like Vite configuration files).
+
+3.  **Scripts**:
+    *   `"dev"`: Starts the Vite development server with Hot Module Replacement (HMR).
+    *   `"build"`: Compiles the application for production into the `dist` folder.
+    *   `"preview"`: Locally serves the production build to verify it works before deployment.
+    *   `"lint"`: (Added as a best practice) Runs ESLint to check code quality.
+
+4.  **Dependencies**:
+    *   `react` & `react-dom`: Core libraries for the UI (v18+).
+    *   `react-router-dom`: The standard routing library for React applications (v6+).
+
+5.  **DevDependencies**:
+    *   `vite`: The build tool and development server (v5+).
+    *   `@vitejs/plugin-react`: The official Vite plugin for React support (enables Fast Refresh).
+    *   `eslint` & plugins: Standard linting configuration for React projects to catch errors early.
+    *   `@types/*`: Type definitions are included as a best practice for IDE autocompletion, even if not strictly using TypeScript files yet.

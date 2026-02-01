@@ -18,6 +18,9 @@ Dependencies
   <web>https://vite.dev/guide/</web>
 </vite_getting_started_guide>
 
+<string_of_includes>
+</string_of_includes>
+
 Instructions
 - Export a default Vite configuration object using defineConfig from 'vite'
 - Import and register @vitejs/plugin-react in the plugins array
